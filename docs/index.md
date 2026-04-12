@@ -1,65 +1,41 @@
-# Laravel Djot
+---
+layout: home
 
-Djot markup language integration for Laravel applications.
+hero:
+  name: Laravel Djot
+  text: Djot for Laravel
+  tagline: Blade directives, services, validation, and caching for the Djot markup language
+  image:
+    src: /logo.svg
+    alt: Laravel Djot
+  actions:
+    - theme: brand
+      text: Get Started
+      link: /guide/
+    - theme: alt
+      text: Extensions
+      link: /extensions/
+    - theme: alt
+      text: View on GitHub
+      link: https://github.com/php-collective/laravel-djot
 
-## What is Djot?
-
-[Djot](https://djot.net) is a modern light markup language created by John MacFarlane, the author of CommonMark and Pandoc. It builds on Markdown's foundation while addressing its complexity issues:
-
-- **Cleaner syntax** — more consistent rules, fewer edge cases
-- **More features** — footnotes, definition lists, task lists, math, highlights, and more
-- **Easier to parse** — simpler specification, faster implementations
-- **Better extensibility** — designed for customization
-
-## Features
-
-This package provides:
-
-- **Blade directives** — `@djot`, `@djotRaw`, `@djotText`
-- **Facade** — `Djot::toHtml()`, `Djot::toText()`, `Djot::toHtmlRaw()`
-- **Service injection** — `DjotConverterInterface` and `DjotManager` for controllers and services
-- **Validation** — `ValidDjot` rule for request validation
-- **Multiple profiles** — different configurations for different contexts (e.g. user content vs. admin content)
-- **Safe mode** — XSS protection for untrusted input (enabled by default)
-- **Caching** — optional caching of rendered output via any Laravel cache store
-- **Plain text** — extract plain text for search indexing or previews
-
-## Quick Start
-
-```bash
-composer require php-collective/laravel-djot
-```
-
-```blade
-{{-- In your Blade views --}}
-@djot($article->body)
-```
-
-```php
-// In your services
-public function __construct(
-    private DjotConverterInterface $djot,
-) {}
-
-public function render(string $content): string
-{
-    return $this->djot->toHtml($content);
-}
-```
-
-## Documentation
-
-- [Installation](installation.md)
-- [Configuration](configuration.md)
-- [Blade Usage](blade-usage.md)
-- [Service Usage](service-usage.md)
-- [Validation](validation.md)
-- [Safe Mode](safe-mode.md)
-- [Caching](caching.md)
-- [Extensions](extensions.md)
-- [Djot Syntax](djot-syntax.md)
-
-## Requirements
-
-- PHP 8.2 or higher
-- Laravel 11.x, 12.x or 13.x
+features:
+  - icon: "\u2694\uFE0F"
+    title: Blade Directives
+    details: "@djot, @djotRaw, @djotText \u2014 render Djot markup directly in your Blade views"
+  - icon: "\uD83D\uDD12"
+    title: Safe Mode
+    details: Built-in XSS protection enabled by default for untrusted user input
+  - icon: "\uD83C\uDFAD"
+    title: Multiple Profiles
+    details: Different converter configurations for different contexts (user content, admin, CMS)
+  - icon: "\uD83E\uDDE9"
+    title: Extensible
+    details: 17 built-in extensions \u2014 autolink, mentions, TOC, heading permalinks, and more
+  - icon: "\u2705"
+    title: Validation
+    details: ValidDjot rule for request validation of Djot markup input
+  - icon: "\u26A1"
+    title: Caching
+    details: Optional output caching via any Laravel cache store for better performance
+---
