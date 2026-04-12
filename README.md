@@ -168,7 +168,7 @@ Available extensions:
 - `tabs` - Tabbed content blocks (CSS or ARIA mode)
 - `wikilinks` - Support `[[Page Name]]` wiki-style links
 
-See [Extensions documentation](docs/extensions.md) for detailed configuration options.
+See [Extensions documentation](https://php-collective.github.io/laravel-djot/extensions/) for detailed configuration options.
 
 ### Validation Rule
 
@@ -184,17 +184,21 @@ $request->validate([
 
 ## Documentation
 
-See the [docs/](docs/) folder for detailed documentation:
+Full documentation: **[php-collective.github.io/laravel-djot](https://php-collective.github.io/laravel-djot/)**
 
-- [Installation](docs/installation.md)
-- [Configuration](docs/configuration.md)
-- [Blade Usage](docs/blade-usage.md)
-- [Service Usage](docs/service-usage.md)
-- [Validation](docs/validation.md)
-- [Safe Mode](docs/safe-mode.md)
-- [Extensions](docs/extensions.md)
-- [Caching](docs/caching.md)
-- [Djot Syntax](docs/djot-syntax.md)
+- [Installation](https://php-collective.github.io/laravel-djot/guide/installation)
+- [Configuration](https://php-collective.github.io/laravel-djot/guide/configuration)
+- [Blade Usage](https://php-collective.github.io/laravel-djot/guide/blade-usage)
+- [Service Usage](https://php-collective.github.io/laravel-djot/guide/service-usage)
+- [Validation](https://php-collective.github.io/laravel-djot/guide/validation)
+- [Safe Mode](https://php-collective.github.io/laravel-djot/guide/safe-mode)
+- [Extensions](https://php-collective.github.io/laravel-djot/extensions/)
+- [Caching](https://php-collective.github.io/laravel-djot/guide/caching)
+- [Djot Syntax](https://php-collective.github.io/laravel-djot/guide/djot-syntax)
+
+## Demo Application
+
+See the [laravel-djot-demo](https://github.com/php-collective/laravel-djot-demo) for a complete example application.
 
 ## What is Djot?
 
