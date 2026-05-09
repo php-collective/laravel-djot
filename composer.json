@@ -17,7 +17,7 @@
             "homepage": "https://github.com/php-collective"
         }
     ],
-    "homepage": "https://github.com/php-collective/laravel-djot",
+    "homepage": "https://php-collective.github.io/laravel-djot/",
     "require": {
         "php": "^8.2",
         "php-collective/djot": "^0.1.24",
