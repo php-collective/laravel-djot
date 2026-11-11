@@ -37,9 +37,10 @@ class DjotManagerTest extends TestCase
 
     public function testToHtmlRawBypassesSafeMode(): void
     {
-        $html = $this->manager->toHtmlRaw('[Click](javascript:alert(1))');
+        // Raw HTML shows the bypass; djot blanks dangerous URL schemes in every mode.
+        $html = $this->manager->toHtmlRaw('`<b>raw</b>`{=html}');
 
-        $this->assertStringContainsString('href="javascript:alert(1)"', $html);
+        $this->assertStringContainsString('<b>raw</b>', $html);
     }
 
     public function testToText(): void
