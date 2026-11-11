@@ -37,14 +37,15 @@ class BladeDirectiveTest extends TestCase
     public function testDjotRawDirectiveBypassesSafeMode(): void
     {
         $compiled = Blade::compileString('@djotRaw($content)');
-        $content = '[Click](javascript:alert(1))';
+        // Raw HTML shows the bypass; djot blanks dangerous URL schemes in every mode.
+        $content = '`<b>raw</b>`{=html}';
 
         ob_start();
         eval('?>' . $compiled);
         /** @var string $output */
         $output = ob_get_clean();
 
-        $this->assertStringContainsString('javascript:', $output);
+        $this->assertStringContainsString('<b>raw</b>', $output);
     }
 
     public function testDjotTextDirectiveOutputsPlainText(): void

@@ -50,9 +50,10 @@ class DjotConverterTest extends TestCase
     {
         $converter = new DjotConverter(safeMode: false);
 
-        $html = $converter->toHtml('[Click me](javascript:alert(1))');
+        // Raw HTML shows safe mode is off; djot blanks dangerous URL schemes in every mode.
+        $html = $converter->toHtml('`<b>raw</b>`{=html}');
 
-        $this->assertStringContainsString('javascript:', $html);
+        $this->assertStringContainsString('<b>raw</b>', $html);
     }
 
     public function testParseReturnsDocument(): void
